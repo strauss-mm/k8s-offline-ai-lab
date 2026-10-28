@@ -1,0 +1,11 @@
+# Bug: misspelled image name
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-1
+spec:
+  containers:
+  - name: web
+    image: ngnix:1.27
+    ports:
+    - containerPort: 80

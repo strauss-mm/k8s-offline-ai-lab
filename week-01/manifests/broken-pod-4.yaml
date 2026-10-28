@@ -1,0 +1,10 @@
+# Bug: command exits immediately, Pod enters CrashLoopBackOff
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-4
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: ["echo", "hello"]

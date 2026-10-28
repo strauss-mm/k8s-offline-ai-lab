@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: root-pod
+spec:
+  containers:
+  - name: root-shell
+    image: busybox
+    command: ["sleep", "3600"]

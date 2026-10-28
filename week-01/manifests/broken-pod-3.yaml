@@ -1,0 +1,7 @@
+# Bug: containers array is empty
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-3
+spec:
+  containers: []

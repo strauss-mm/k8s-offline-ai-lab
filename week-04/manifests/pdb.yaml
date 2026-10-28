@@ -1,0 +1,9 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: pdb-test-budget
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: pdb-test

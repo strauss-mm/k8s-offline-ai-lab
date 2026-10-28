@@ -1,0 +1,11 @@
+# Bug: containerPort must be an integer
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-2
+spec:
+  containers:
+  - name: web
+    image: nginx:1.27
+    ports:
+    - containerPort: "eighty"

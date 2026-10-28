@@ -1,0 +1,24 @@
+# Calico v3.28 manifest for kind
+# Download the real manifest while online:
+#   curl -O https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml
+#
+# This is a placeholder. Before going offline, replace this file:
+#
+#   curl -o setup/calico.yaml \
+#     https://raw.githubusercontent.com/projectcalico/calico/v3.28.0/manifests/calico.yaml
+#
+# The actual manifest is ~4000 lines and must match the Calico images
+# you pre-pulled. The prepull script pulls v3.28.0 images.
+#
+# After downloading, apply with:
+#   kubectl apply -f setup/calico.yaml
+#
+# Verify:
+#   kubectl -n kube-system get pods -l k8s-app=calico-node
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: calico-placeholder
+  annotations:
+    note: "Replace this file with the real Calico manifest — see comments above"

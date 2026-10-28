@@ -1,0 +1,13 @@
+# Bug: memory limit too low for nginx to start
+apiVersion: v1
+kind: Pod
+metadata:
+  name: broken-5
+spec:
+  containers:
+  - name: web
+    image: nginx:1.27
+    resources:
+      limits:
+        cpu: 1m
+        memory: 1Mi
